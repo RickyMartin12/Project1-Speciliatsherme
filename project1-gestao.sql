@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13-Set-2024 às 13:18
+-- Tempo de geração: 13-Set-2024 às 13:24
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.0.11
 
@@ -405,7 +405,7 @@ ALTER TABLE `pergunta`
 --
 ALTER TABLE `resposta`
   ADD CONSTRAINT `cat_id_resposta` FOREIGN KEY (`cat_id`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `user_id_resposta` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_id_resposta` FOREIGN KEY (`user_id`) REFERENCES `admins` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `solicitacao`
